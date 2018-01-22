@@ -1,0 +1,273 @@
+select {
+    padding: .75em 1em .5em 1em;
+    font-size: 1em;
+    border: 1px solid #bbb;
+    box-shadow: 0 2px 7px 0 #000000;
+    color: black;
+    font-size: 15px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+option {
+    background: white;
+    border-top: 1px solid #444;
+    padding: .3em 1em .3em 1em;
+}
+
+button {
+    color: #fff;
+    background-color: royalblue;
+    border-color: transparent;
+}
+
+#btnback {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#btnforward {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    float: right;
+}
+
+#btnbuchen {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    float: right;
+}
+
+#btnregister {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 51.3%;
+}
+
+#btnlogin {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 51.3%;
+}
+
+.centerbtn {
+    text-align: center;
+}
+
+div {
+    display: block;
+}
+
+.row {
+    margin-right: -15px;
+}
+
+#auswahl {
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-buttom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+#neuesKonto {
+    text-align: center;
+}
+
+#logschrift {
+    text-align: center;
+}
+
+h3 {
+    width: 600px;
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-button: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    width: 600px;
+    color: black;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rahmen {
+    background-color: #ffffff;
+    border: 1px solid royalblue;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border-radius: 3px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55.5% !important;
+
+}
+
+.displayMiddle {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55.5% !important;
+}
+
+.facharztbutton {
+    margin-top: 13.8%;
+    margin-left: 62%
+}
+
+a {
+    color: blue;
+}
+
+body {
+    background: url("../../img/Arzt.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bodyfach {
+    background: url("../../img/Background Arzt.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#agbdata {
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+}
+
+#empfehlung {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70% !important;
+}
+
+#tick {
+    text-align: center;
+}
+
+#komplett {
+    margin-top: 10%;
+}
+
+#komplettreg {
+    margin-top: 3%;
+}
+
+#found {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    color: royalblue;
+    font-size: 32px;
+    margin: auto;
+    text-align: center;
+}
+
+#calendar {
+    width: auto;
+    height: 180px;
+    background-color: royalblue;
+    color: #fff;
+    border-radius: 1%;
+    border: 1px solid #bbb;
+    box-shadow: 0 4px 4px 0 rgba(50, 50, 50, 0.4);
+}
+
+#calendar > p {
+    padding: 10px 0;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+}
+
+#calendar-day {
+    font-size: 16px;
+}
+
+#calendar-month-year {
+    font-size: 14px;
+}
+
+#calendar-date {
+    font-size: 64px;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.customBtn {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: auto;
+    height: 50px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+}
+
+.noBackground {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.customBtn:hover {
+    cursor: pointer;
+}
+
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+.icon {
+    background: url('../../img/G__Logo.png') transparent 5px 50% no-repeat;
+    display: inline-block;;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+
+span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+

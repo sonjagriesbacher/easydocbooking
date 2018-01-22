@@ -1,0 +1,59 @@
+<!--<div id= "komplett" class="container">
+    <h1>
+        <strong>
+            <u>Doctor Online-Terminbuchung</u>
+        </strong>
+    </h1>
+    <h3 id="logschrift">
+        Melde dich mit deinen Zugangsdaten an
+    </h3>
+    <form>
+        <div id="middle">
+            <div class="row">
+                <div class="form-group">
+                    <h4 id="benutzername">
+                        <strong>
+                            Benutzername:
+                        </strong>
+                        <input type="text" class="form-control" name="benutzername" placeholder="Benutzername" required>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <h4 for="passwort">
+                        <strong>
+                            Passwort:
+                        </strong>
+                        <input type="password" class="form-control" name="passwort" placeholder="Passwort" required>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group centerbtn">
+                    <a type="submit" class="btn btn-success" id="btnlogin" href="#!facharztbezeichnung">Login</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "centerbtn">
+                    <p>Sie haben noch kein Konto?
+                        <a id="newAccount" href="#!registrierung">Kostenlos registrieren</a> </p>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>-->
+
+<div id="komplett" class="container" ng-controller="LoginController" xmlns="http://www.w3.org/1999/html">
+    <h1>Google Login</h1>
+    <div class="displayMiddle">
+        <span>Melden Sie sich mit Google an: </span></br>
+
+            <button class="customBtn" ng-click="initClient()" id="sign-in-or-out-button"><img class="icon" src="../img/G__Logo.png">Google</button>
+            <button class="customBtn noBackground" id="facharzt" ng-click="go('/facharztbezeichnung')">
+                <a href="#!facharztbezeichnung" disabled="disabled"></a>
+            </button>
+
+    </div>
+</div>

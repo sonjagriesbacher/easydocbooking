@@ -1,0 +1,55 @@
+{
+  "name": "wt-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "grunt server",
+    "build": "grunt build"
+  },
+  "author": "",
+  "license": [
+    {
+      "type": "ISC"
+    },
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-mocks": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "angular-sanitize": "^1.6.7",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "gapi": "0.0.3",
+    "jquery": "^3.2.1",
+    "method-override": "^2.3.10",
+    "mongodb": "^3.0.0-rc0",
+    "mongoose": "^4.13.7",
+    "mongoose-data-seed": "^1.0.2",
+    "mongoose-seed-db": "0.0.10",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.3.1",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "restangular": "^1.6.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "matchdep": "^2.0.0",
+    "nodemon": "^1.12.1",
+    "serve-static": "^1.13.1"
+  }
+}
