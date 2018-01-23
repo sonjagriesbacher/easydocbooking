@@ -14,7 +14,7 @@ var app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-var port = 8000;
+var port = process.env.PORT;
 
 app.post('/bestaetigung', function (req, res) {
 
