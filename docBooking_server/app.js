@@ -31,7 +31,7 @@ require('./app/routes')(app, passport);
 var MongooseSeed = require('mongoose-seed-db');
 //import MongooseSeed from 'mongoose-seed-db'; //ES6
 
-MongooseSeed.connect('mongodb://localhost:27017/docBooking').then(() => {
+MongooseSeed.connect(process.env._MONGODB_URI).then(() => {
     console.log("jaaaaaaaaaa");
     MongooseSeed.loadModels(__dirname + '/app/models');
     MongooseSeed.clearAll().then(() => {
