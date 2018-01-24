@@ -36,7 +36,7 @@ MongooseSeed.connect('mongodb:' + process.env._MONGODB_URI).then(() => {
     MongooseSeed.loadModels(__dirname + '/app/models');
     MongooseSeed.clearAll().then(() => {
         MongooseSeed.populate(__dirname + '/app/data').then(() => {
-            console.log("baseData success");
+            //console.log("baseData success");
             //process.exit();
         });
     });
