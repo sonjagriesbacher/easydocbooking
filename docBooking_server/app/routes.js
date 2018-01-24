@@ -43,7 +43,7 @@ module.exports = function (app) {
      res.json(doctor, termin);
      if(error) res.send(error);
      });*/
-    app.get('/facharztbezeichnung', (req, res, error, doctors, termins) => {
+   /* app.get('/facharztbezeichnung', (req, res, error, doctors, termins) => {
         Doctor.find({}, function (doctors) {
             //if (error) res.send(error);
             console.log("getDoctorsMethodeAufgerufen");
@@ -53,7 +53,7 @@ module.exports = function (app) {
             console.log('getTerminMethodeAufgerufen');
             return res.json(termins);
         });
-    });
+    });*/
 
     app.get('/facharztbezeichnung', (req, res) => {
         Doctor.find({}, function (error, doctors) {
