@@ -16,9 +16,6 @@ var database = require('./config/database');
 
 mongoose.connect(database.url);
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(cookieParser());
