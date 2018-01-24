@@ -2,85 +2,78 @@ app.controller('FacharztController', ['$scope', '$http', '$location', function (
     $http.get('/facharztbezeichnung').then(function (response) {
         $scope.doctors = response.data;
 
+        console.log($scope.doctors);
+        $scope.termins = response.data;
+
+        console.log($scope.termins);
+
         var doctors = $scope.doctors;
 
         console.log($scope.doctors);
 
         var resultFacharzt = doctors.map(a => a.fachbezeichnung);
-        var resultName = doctors.map(a => a.name);
-        var resultVorname = doctors.map(a => a.vorname);
-        var resultStrasse = doctors.map(a => a.strasse);
-        var resultPlz = doctors.map(a => a.plz);
-        var resultNummer = doctors.map(a => a.nummer);
 
-        // console.log(resultFacharzt);
-        //console.log(resultName);
-        //console.log(resultVorname);
-        //console.log(resultStrasse);
-        //console.log(resultPlz);
-        //console.log(resultNummer);
-
-        function hautarztArrayGenerator(array) {
-            var hautarztArray = [];
+        function hautaerzteArrayGenerator(array) {
+            var hautaerzteArray = [];
             for (let i = 0; i <= 3; i++) {
-                hautarztArray.push(array[i]);
+                hautaerzteArray.push(array[i]);
             }
-            return hautarztArray;
+            return hautaerzteArray;
         }
 
-        var hautarzt = hautarztArrayGenerator(doctors);
+        $scope.hautaerzte = hautaerzteArrayGenerator(doctors);
 
-        console.log(hautarzt);
+        console.log($scope.hautaerzte);
 
-        function frauenarztArrayGenerator(array) {
-            var frauenarztArray = [];
+        function frauenaerzteArrayGenerator(array) {
+            var frauenaerzteArray = [];
             for (let i = 4; i <= 7; i++) {
-                frauenarztArray.push(array[i]);
+                frauenaerzteArray.push(array[i]);
             }
-            return frauenarztArray;
+            return frauenaerzteArray;
         }
 
-        var frauenarzt = frauenarztArrayGenerator(doctors);
+        $scope.frauenaerzte = frauenaerzteArrayGenerator(doctors);
 
-        function urologeArrayGenerator(array) {
-            var urologeArray = [];
+        function urologenArrayGenerator(array) {
+            var urologenArray = [];
             for (let i = 8; i <= 11; i++) {
-                urologeArray.push(array[i]);
+                urologenArray.push(array[i]);
             }
-            return urologeArray;
+            return urologenArray;
         }
 
-        var urologe = urologeArrayGenerator(doctors);
+        $scope.urologen = urologenArrayGenerator(doctors);
 
-        function orthopaedeArrayGenerator(array) {
-            var orthopaedearray = [];
+        function orthopaedenArrayGenerator(array) {
+            var orthopaedenArray = [];
             for (let i = 12; i <= 15; i++) {
-                orthopaedearray.push(array[i]);
+                orthopaedenArray.push(array[i]);
             }
-            return orthopaedearray;
+            return orthopaedenArray;
         }
 
-        var orthopaede = orthopaedeArrayGenerator(doctors);
+        $scope.orthopaeden = orthopaedenArrayGenerator(doctors);
 
-        function hnoArrayGenerator(array) {
-            var hnoarray = [];
+        function hnosArrayGenerator(array) {
+            var hnosArray = [];
             for (let i = 16; i <= 19; i++) {
-                hnoarray.push(array[i]);
+                hnosArray.push(array[i]);
             }
-            return hnoarray;
+            return hnosArray;
         }
 
-        var hno = hnoArrayGenerator(doctors);
+        $scope.hnos = hnosArrayGenerator(doctors);
 
-        function augenarztArrayGenerator(array) {
-            var augenarztarray = [];
+        function augenaerzteArrayGenerator(array) {
+            var augenaerzteArray = [];
             for (let i = 20; i <= 23; i++) {
-                augenarztarray.push(array[i]);
+                augenaerzteArray.push(array[i]);
             }
-            return augenarztarray;
+            return augenaerzteArray;
         }
 
-        var augenarzt = augenarztArrayGenerator(doctors);
+        $scope.augenaerzte = augenaerzteArrayGenerator(doctors);
 
         function removeDuplicates(arr) {
             let unique_array = [];
@@ -103,11 +96,6 @@ app.controller('FacharztController', ['$scope', '$http', '$location', function (
 
         $scope.unique_fachbezeichnung_object = toObject(unique_fachbezeichnung_array);
 
-        console.log($scope.unique_fachbezeichnung_object);
-
-        var chosen_facharzt = document.getElementById('facharztbezeichnung').value;
-
-
     });
     $scope.go = function (path) {
         $location.path(path);
@@ -118,5 +106,6 @@ app.controller('FacharztController', ['$scope', '$http', '$location', function (
         var chosen_facharzt = document.getElementById('facharztbezeichnung').value;
         console.log(chosen_facharzt);
 
-    }
+    };
+
 }]);

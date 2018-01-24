@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
+var async = require('async');
 var passport = require('passport');
 var flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
@@ -14,6 +15,9 @@ var port = process.env.PORT || 3000;
 var database = require('./config/database');
 
 mongoose.connect(database.url);
+
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));

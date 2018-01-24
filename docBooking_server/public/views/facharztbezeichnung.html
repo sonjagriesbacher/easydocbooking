@@ -9,7 +9,7 @@
         Finden Sie den Facharzt mit dem besten Termin in Ihrer Nähe!
     </p>
     <div class="rahmen container">
-        <h2 id="auswahl">
+        <h2 class="auswahl">
             <strong>
                 Bitte wählen Sie eine Facharztbezeichnung aus:
             </strong>
@@ -20,15 +20,62 @@
                     value="{{unique_fachbezeichnung}}">{{unique_fachbezeichnung}}
             </option>
         </select>
+        <h2 class="auswahl">
+            <strong>
+                Bitte wählen Sie nun einen Arzt aus:
+            </strong>
+        </h2>
         <select id="arztwahl">
             <option value="" disabled selected>Arzt wählen</option>
-            <option ng-repeat="doctor in doctors">{{ doctor.vorname }} {{ doctor.name }}, {{doctor.strasse}}
-                {{doctor.nummer}}, {{doctor.plz}}
+            <option ng-if="facharztbezeichnung === 'Hautarzt'" ng-repeat="hautarzt in hautaerzte" value="{{hautarzt.name}}">{{ hautarzt.vorname }} {{ hautarzt.name }}, {{hautarzt.strasse}}
+                {{hautarzt.nummer}}, {{hautarzt.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Frauenarzt'" ng-repeat="frauenarzt in frauenaerzte" value="{{frauenarzt.name}}">{{ frauenarzt.vorname }} {{ frauenarzt.name }}, {{frauenarzt.strasse}}
+                {{frauenarzt.nummer}}, {{frauenarzt.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Urologe'" ng-repeat="urologe in urologen" value="{{urologe.name}}">{{ urologe.vorname }} {{ urologe.name }}, {{urologe.strasse}}
+                {{urologe.nummer}}, {{urologe.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'HNO'" ng-repeat="hno in hnos" value="{{hno.name}}">{{ hno.vorname }} {{ hno.name }}, {{hno.strasse}}
+                {{hno.nummer}}, {{hno.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Orthopäde'" ng-repeat="orthopaede in orthopaeden" value="{{orthopaede.name}}">{{ orthopaede.vorname }} {{ orthopaede.name }}, {{orthopaede.strasse}}
+                {{orthopaede.nummer}}, {{orthopaede.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Augenarzt'" ng-repeat="augenarzt in augenaerzte" value="{{augenarzt.name}}">{{ augenarzt.vorname }} {{ augenarzt.name }}, {{augenarzt.strasse}}
+                {{augenarzt.nummer}}, {{augenarzt.plz}}
             </option>
         </select>
+
+        <h2 class="auswahl">
+            <strong>
+                Bitte wählen Sie nun einen Termin bei Ihrem gewählten Arzt aus:
+            </strong>
+        </h2>
+        <select id="terminwahl" ng-model="arztwahl">
+            <option value="" disabled selected>Termin wählen</option>
+            <option ng-if="arztwahl === 'Hautarzt'" ng-repeat="hautarzt in hautaerzte" value="{{hautarzt.name}}">{{ hautarzt.vorname }} {{ hautarzt.name }}, {{hautarzt.strasse}}
+                {{hautarzt.nummer}}, {{hautarzt.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Frauenarzt'" ng-repeat="frauenarzt in frauenaerzte" value="{{frauenarzt.name}}">{{ frauenarzt.vorname }} {{ frauenarzt.name }}, {{frauenarzt.strasse}}
+                {{frauenarzt.nummer}}, {{frauenarzt.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Urologe'" ng-repeat="urologe in urologen" value="{{urologe.name}}">{{ urologe.vorname }} {{ urologe.name }}, {{urologe.strasse}}
+                {{urologe.nummer}}, {{urologe.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'HNO'" ng-repeat="hno in hnos" value="{{hno.name}}">{{ hno.vorname }} {{ hno.name }}, {{hno.strasse}}
+                {{hno.nummer}}, {{hno.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Orthopäde'" ng-repeat="orthopaede in orthopaeden" value="{{orthopaede.name}}">{{ orthopaede.vorname }} {{ orthopaede.name }}, {{orthopaede.strasse}}
+                {{orthopaede.nummer}}, {{orthopaede.plz}}
+            </option>
+            <option ng-if="facharztbezeichnung === 'Augenarzt'" ng-repeat="augenarzt in augenaerzte" value="{{augenarzt.name}}">{{ augenarzt.vorname }} {{ augenarzt.name }}, {{augenarzt.strasse}}
+                {{augenarzt.nummer}}, {{augenarzt.plz}}
+            </option>
+        </select>
+
         <div class="form-group">
             <a class="btn btn-success" id="btnback" href="#!">Zurück</a>
-            <button ng-click="chosenFacharzt()">Bitte prüfen</button>
             <button ng-click="go('/arztwahl')" ng-disabled="!facharztbezeichnung"
                     class="btn btn-success facharztbutton">Weiter
             </button>
