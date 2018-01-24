@@ -32,7 +32,7 @@ var MongooseSeed = require('mongoose-seed-db');
 //import MongooseSeed from 'mongoose-seed-db'; //ES6
 
 MongooseSeed.connect('mongodb:' + process.env._MONGODB_URI).then(() => {
-    console.log("jaaaaaaaaaa");
+    //console.log("jaaaaaaaaaa");
     MongooseSeed.loadModels(__dirname + '/app/models');
     MongooseSeed.clearAll().then(() => {
         MongooseSeed.populate(__dirname + '/app/data').then(() => {
