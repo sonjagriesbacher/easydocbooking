@@ -54,24 +54,30 @@
         </h2>
         <select id="terminwahl" ng-model="arztwahl">
             <option value="" disabled selected>Termin wählen</option>
-            <option ng-if="arztwahl === 'Hautarzt'" ng-repeat="hautarzt in hautaerzte" value="{{hautarzt.name}}">{{ hautarzt.vorname }} {{ hautarzt.name }}, {{hautarzt.strasse}}
-                {{hautarzt.nummer}}, {{hautarzt.plz}}
-            </option>
-            <option ng-if="facharztbezeichnung === 'Frauenarzt'" ng-repeat="frauenarzt in frauenaerzte" value="{{frauenarzt.name}}">{{ frauenarzt.vorname }} {{ frauenarzt.name }}, {{frauenarzt.strasse}}
-                {{frauenarzt.nummer}}, {{frauenarzt.plz}}
-            </option>
-            <option ng-if="facharztbezeichnung === 'Urologe'" ng-repeat="urologe in urologen" value="{{urologe.name}}">{{ urologe.vorname }} {{ urologe.name }}, {{urologe.strasse}}
-                {{urologe.nummer}}, {{urologe.plz}}
-            </option>
-            <option ng-if="facharztbezeichnung === 'HNO'" ng-repeat="hno in hnos" value="{{hno.name}}">{{ hno.vorname }} {{ hno.name }}, {{hno.strasse}}
-                {{hno.nummer}}, {{hno.plz}}
-            </option>
-            <option ng-if="facharztbezeichnung === 'Orthopäde'" ng-repeat="orthopaede in orthopaeden" value="{{orthopaede.name}}">{{ orthopaede.vorname }} {{ orthopaede.name }}, {{orthopaede.strasse}}
-                {{orthopaede.nummer}}, {{orthopaede.plz}}
-            </option>
-            <option ng-if="facharztbezeichnung === 'Augenarzt'" ng-repeat="augenarzt in augenaerzte" value="{{augenarzt.name}}">{{ augenarzt.vorname }} {{ augenarzt.name }}, {{augenarzt.strasse}}
-                {{augenarzt.nummer}}, {{augenarzt.plz}}
-            </option>
+            <!--            <option ng-if="arztwahl.value === 'Rief'" ng-repeat="Termin1 in riefTermine" value="{{riefTermine.datum}}">{{ Termin1.datum }} {{ Termin1.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Remling'" ng-repeat="Termin2 in remlingTermine" value="{{remlingTermine.datum}}">{{Termin2.datum}} {{ Termin2.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Willner'" ng-repeat="Termin3 in willnerTermine" value="{{willnerTermine.datum}}">{{ Termin3.datum }} {{ Termin3.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Manstein'" ng-repeat="Termin4 in mansteinTermine" value="{{mansteinTermine.datum}}">{{ Termin4.datum }} {{ Termin4.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Fava'" ng-repeat="Termin5 in favaTermine" value="{{favaTermine.datum}}">{{ Termin5.datum }} {{ Termin5.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Geldner-Mischutina'" ng-repeat="Termin6 in gmTermine" value="{{gmTermine.datum}}">{{Termin6.datum}} {{ Termin6.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Diewald'" ng-repeat="Termin7 in DiewaldTermine" value="{{DiewaldTermine.datum}}">{{ Termin7.datum }} {{ Termin7.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Zahn'" ng-repeat="Termin8 in ZahnTermine" value="{{ZahnTermine.datum}}">{{ Termin8.datum }} {{ Termin8.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Ehrl'" ng-repeat="Termin9 in EhrlTermine" value="{{EhrlTermine.datum}}">{{ Termin9.datum }} {{ Termin9.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Moebs'" ng-repeat="Termin10 in MoebsTermine" value="{{MoebsTermine.datum}}">{{ Termin10.datum }} {{ Termin10.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Rittinger'" ng-repeat="Termin11 in RittingerTermine" value="{{RittingerTermine.datum}}">{{ Termin11.datum }} {{ Termin11.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Hofmann'" ng-repeat="Termin12 in HofmannTermine" value="{{HofmannTermine.datum}}">{{ Termin12.datum }} {{ Termin12.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Stelter'" ng-repeat="Termin13 in StelterTermine" value="{{StelterTermine.datum}}">{{ Termin13.datum }} {{ Termin13.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Geyer'" ng-repeat="Termin14 in GeyerTermine" value="{{GeyerTermine.datum}}">{{ Termin14.datum }} {{ Termin14.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Brünings'" ng-repeat="Termin15 in BrueningsTermine" value="{{BrüningsTermine.datum}}">{{ Termin15.datum }} {{ TermTermin15in7.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Kraus'" ng-repeat="Termin16 in KrausTermine" value="{{KrausTermine.datum}}">{{ Termin16.datum }} {{ Termin16.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Weigel'" ng-repeat="Termin17 in WeigelTermine" value="{{WeigelTermine.datum}}">{{ Termin17.datum }} {{ Termin17.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Kretschmann'" ng-repeat="Termin18 in KretschmannTermine" value="{{KretschmannTermine.datum}}">{{ Termin18.datum }} {{ Termin18.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Hohenthanner'" ng-repeat="Termin19 in HohenthannerTermine" value="{{HohenthannerTermine.datum}}">{{ Termin19.datum }} {{ Termin19.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Zwickl'" ng-repeat="Termin20 in ZwicklTermine" value="{{ZwicklTermine.datum}}">{{ Termin20.datum }} {{ Termin20.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Neunzig'" ng-repeat="Termin21 in NeunzigTermine" value="{{NeunzigTermine.datum}}">{{ Termin21.datum }} {{ Termin21.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Huber'" ng-repeat="Termin22 in HuberTermine" value="{{HuberTermine.datum}}">{{ Termin22.datum }} {{ Termin22.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Strobl'" ng-repeat="Termin23 in StroblTermine" value="{{StroblTermine.datum}}">{{ Termin23.datum }} {{ Termin23.uhrzeit }}</option>
+                        <option ng-if="arztwahl.value === 'Bauer'" ng-repeat="Termin24 in BauerTermine" value="{{BauerTermine.datum}}">{{ Termin24.datum }} {{ Termin24.uhrzeit }}</option>-->
         </select>
 
         <div class="form-group">
